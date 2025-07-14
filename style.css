@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+   margin: 0; 
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+body{
+    background: #121214 url(img/bg.jpg) top center no-repeat;
+    background-size: 100% auto;
+    color: white;
+    font-family: "Inter", sans-serif;
+    line-height: 160%;
+}
+
+header{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+header img{
+    width: 15rem;
+}
+
+main{
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto;
+}
+
+section{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%); 
+    border-radius: 0.625rem;
+    padding-top: 3px;
+}
+
+section > div{
+    background-color: #2A2634;
+    border-radius: 8px;
+    padding: 1.5rem 2rem 2rem;
+}
+
+h1{
+    letter-spacing: -0.3px;
+    font-weight: 600;
+}
+
+p{
+    letter-spacing: -0.12px;
+    color: #A1A1AA;
+}
+
+/*Animação main appear*/
+
+main section{
+    opacity: 0;
+    transform: translateY(2rem);
+
+    animation-name: appear;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes appear{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin: 1.25rem 0rem;
+}
+
+input, select{
+    all: unset;
+    border: 2px solid #9147ff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 12px;
+    background-color: rgba(18, 18, 20, 0.5);
+}
+
+input{
+    flex: 1;
+}
+
+button{
+    width: 100%;
+    margin-top: 0.65rem;
+    background-image: linear-gradient(to left, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+    padding: 0.675rem;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.10px;
+    text-transform: uppercase;
+
+    transition: all 0.2s;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(255, 248, 107, 0.2);
+}
+
+button:disabled{
+    transition: initial;
+    transform: translate(0);
+    box-shadow: initial;
+    cursor: auto;
+    color: black;
+}
+
+div #resposta{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    padding: 1.25rem;
+    border-left: 4px solid #9147ff;
+}
+
+#resposta ul{
+    padding-left: 1.5rem;
+    opacity: 0.8;
+
+}
+
+#resposta p{
+    color: white;
+    text-align: justify;
+}
+
+.hidden{
+    display: none;
+}
+
+/*Animação button*/
+
+.loading{
+ animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        opacity: 0.5;
+    }
+}

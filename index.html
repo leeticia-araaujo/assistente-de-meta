@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de meta | NLW Agents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!--Cabeçalho com a logo-->
+        <img src="img/logo.png" alt="logo esportes nlw">
+    </header>
+    <main> <!--Conteudo principal-->
+        <section>
+            <div>
+                <h1>Assistente de Meta</h1>
+                <p>Pergunte sobre estratégias, build e dicas para seus jogos.</p>
+
+                <form id="form">                    
+                   <input id="questionInput" type="text" placeholder="Ex: Melhor build top..." required>
+
+                    <select id="gameSelect"> <!--Seletor de jogos-->
+                        <option value="">Selecione um jogo</option>                      
+                        <option value="csgo">CS:GO</option>
+                        <option value="fortnite">Fortnite</option>
+                        <option value="lol">League of Legends</option>
+                        <option value="valorant">Valorant</option>
+                    </select>
+
+                    <button id="button">Perguntar</button>
+                </form>
+                
+                <div id="resposta" class="hidden"> <!--Resposta da IA-->
+                    <div class="conteudo">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
