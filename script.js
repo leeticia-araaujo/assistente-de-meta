@@ -213,5 +213,3 @@ const enviarForm = async (event) => { //cria uma função
 }
 
 form.addEventListener('submit', enviarForm); //evento para quando enviar o formulário
-
-// Chave API: AIzaSyCQ-Iixq48bw5Ld2nRsPN_UGrV7bxE6NnA
