@@ -185,7 +185,7 @@ const enviarForm = async (event) => { //cria uma função
 
     event.preventDefault(); //deixa de enviar o formulário
 
-    const apiKey = 'AIzaSyCQ-Iixq48bw5Ld2nRsPN_UGrV7bxE6NnA';
+    const apiKey = 'AIzaSyCobkERSAgML-A-JpX_Z4EtV1IkhoGwVUM';
     const game = jogo.value;
     const question = pergunta.value;
 
